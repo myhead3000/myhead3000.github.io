@@ -2,7 +2,29 @@
 @import 'mixins';
 @import 'vendor/includemedia';
 @import 'vendor/normalize';
-@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed:300');
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Lato|Quicksand|Raleway|Roboto|Roboto+Condensed');
+
+@font-face {
+    font-family: 'Adventor';
+    src: url('../fonts/texgyreadventor-regular-webfont.eot');
+    src: url('../fonts/texgyreadventor-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/texgyreadventor-regular-webfont.woff') format('woff'),
+         url('../fonts/texgyreadventor-regular-webfont.ttf') format('truetype'),
+         url('../fonts/texgyreadventor-regular-webfont.svg#texgyreadventorregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* -- AVAILABLE FONTS
+    font-family: 'Julius Sans One', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Adventor', sans-serif;
+ */
 
 body {
     margin: 0;
@@ -15,30 +37,59 @@ body {
 
 
 h1 {
-    font-size: 4em;
-    margin: 0.67em 0;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 42px;
+    margin: 0 auto 24px auto;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    letter-spacing: .05em;
     text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 h2 {
-    font-size: 1em;
-    margin: 0.83em 0;
+    font-size: 21px;
+    margin: 0 auto;
+    font-family: 'Helvetica Neue', sans-serif;
     font-weight: 200;
-    text-transform: uppercase;
-    letter-spacing: .25em;
+    letter-spacing: .1em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    opacity: .5;
+}
+
+::selection {
+  background: #000; 
+}
+::-moz-selection {
+  background: #000; 
 }
 
 main {
     position: absolute;
     top: 50%;
+    left: 0; 
+    width: 100%;
+    padding: 0 30px;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+footer {
+    position: absolute;
+    bottom: 50px;
     left: 50%;
-    transform: translate3d(-50%, -50%, 0);
+    transform: translateX(-50%);
     text-align: center;
 
-    p {
-        opacity: .6;
-        letter-spacing: .25em;
+    a {
+        display: block;
+        width: 100px;
+        margin: 0 auto;
+
+        img {
+            max-width: 100%;
+        }
     }
 }
 
