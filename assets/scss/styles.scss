@@ -82,18 +82,45 @@ main {
 footer {
     position: absolute;
     bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    width: 100%;
     text-align: center;
 
+    @include media("<=tablet") {
+        bottom: 20px;
+    }
+
     a {
-        display: block;
-        width: 100px;
-        margin: 0 auto;
+        display: inline-block;
+        margin: 0;
 
         img {
-            max-width: 100%;
+            height: 24px;
+
+            @include media("<=tablet") {
+                height: 20px;
+            }
         }
+    }
+}
+
+.audio-control {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 20px; 
+    width: 20px;
+    height: 20px;
+    background: transparent url('../img/icons/play@2x.png') no-repeat center center;
+    background-size: 14px 17px;
+
+    &.is-playing {
+        background-image: url('../img/icons/pause@2x.png');
+        background-size: 10px 15px;
+    }
+
+    @include media("<=tablet") {
+        display: inline-block;
     }
 }
 
