@@ -6,9 +6,17 @@ $(document).ready(function(){
     var audio     = document.getElementById('audio');
     var userAgent = window.navigator.userAgent;
     var isIOS     = userAgent.match(/iPad/i) || userAgent.match(/iPhone/i);
+    var isIOS9    = function() {
+      var deviceAgent = navigator.userAgent.toLowerCase();
+      return /(iphone|ipod|ipad).* os 9_/.test(deviceAgent);
+    }
 
     if (!isIOS) {
         $('.audio-control').hide();
+    }
+
+    if (isIOS9()) {
+        $('#video').remove();
     }
 
     $('.audio-control').on('click', function(e){
@@ -24,7 +32,7 @@ $(document).ready(function(){
         }
     });
 });
-}).call(this,require("rH1JPG"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_1089a044.js","/")
+}).call(this,require("rH1JPG"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_e295e493.js","/")
 },{"buffer":3,"jquery":5,"rH1JPG":6}],2:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';

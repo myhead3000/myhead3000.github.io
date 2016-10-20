@@ -26,13 +26,20 @@
     font-family: 'Adventor', sans-serif;
  */
 
+ html {
+   height: 100%;
+ }
+
 body {
+    min-height: 100%;
     margin: 0;
     background: black;
     color: white;
     font-family: 'Roboto', sans-serif;
     font-size: 21px;
     font-weight: 200;
+    background: url('../img/video.png') no-repeat center right;
+    background-size: cover; 
 }
 
 
