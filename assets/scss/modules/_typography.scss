@@ -1,0 +1,54 @@
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 1.48;
+}
+
+h1 {
+    font-size: 48px;
+    margin: 0 auto 24px auto;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    @include media("<=tablet") {
+        font-size: 36px;
+    }
+}
+
+h2 {
+    font-size: 24px;
+    margin: 0 auto;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 200;
+    letter-spacing: .1em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    opacity: .5;
+}
+
+::selection {
+  background: #000;
+}
+::-moz-selection {
+  background: #000;
+}
+
+.tac { text-align: center; }
+.tal { text-align: left; }
+.tar { text-align: right; }
+
+blockquote {
+    display: block;
+    margin: 36px 0;
+    font-size: 21px;
+    font-style: italic;
+}

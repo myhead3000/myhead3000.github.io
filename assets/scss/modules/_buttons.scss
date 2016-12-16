@@ -1,0 +1,17 @@
+.button {
+    display: inline-block;
+    padding: 6px 24px;
+    border-radius: 3px;
+    border: 1px solid white;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    opacity: .48;
+    transition: opacity 200ms ease-in-out;
+    font-size: 12px;
+
+    &:hover {
+        opacity: 1;
+    }
+}

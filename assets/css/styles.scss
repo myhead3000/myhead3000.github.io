@@ -1,0 +1,15 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import 'base/variables';
+@import 'base/mixins';
+@import 'vendor/includemedia';
+@import 'vendor/normalize';
+@import 'partials/header';
+@import 'partials/footer';
+@import 'modules/icons';
+@import 'modules/grids';
+@import 'modules/buttons';
+@import 'modules/typography';
+@import 'main';

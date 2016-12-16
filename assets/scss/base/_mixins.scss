@@ -1,0 +1,22 @@
+@mixin iconBg($name, $extension:'png') {
+  background-image: url('../img/icons/#{$name}.#{$extension}');
+
+  @include media('retina2x') {
+    background-image: url('../img/icons/#{$name}@2x.#{$extension}');
+  }
+}
+
+%clearfix {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.clearfix {
+    @extend %clearfix;
+}

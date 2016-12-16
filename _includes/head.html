@@ -1,0 +1,45 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+
+    <!-- Open graph - http://ogp.me/ -->
+    <meta property="og:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}" />
+    <meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ site.url }}" />
+    <meta property="og:image" content="{{ "/assets/img/social.jpg" | absolute_url }}" /><!-- Absolute URL -->
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:site_name" content="{{ site.title | escape }}" />
+
+    <!-- Twitter cards -->
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
+    <meta name="twitter:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+    <meta name="twitter:card" content="photo"><!-- https://dev.twitter.com/cards/types -->
+    <meta name="twitter:url" content="{{ site.url }}">
+    <meta name="twitter:site" content="@{{ site.twitter_username | escape }}" />
+    <meta name="twitter:image" content="{{ "/assets/img/social.jpg" | absolute_url }}"><!-- Absolute URL -->
+
+    <!-- Place favicons at the project's root -->
+    <link rel="apple-touch-icon" href="{{ "/assets/favicons/touch-icon-iphone.png" | absolute_url }}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ "/assets/favicons/touch-icon-ipad.png" | absolute_url }}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ "/assets/favicons/touch-icon-iphone-retina.png" | absolute_url }}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ "/assets/favicons/touch-icon-ipad-retina.png" | absolute_url }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/favicons/apple-touch-icon.png" | absolute_url }}">
+    <link rel="icon" type="image/png" href="{{ "/assets/favicons/favicon-32x32.png" | absolute_url }}" sizes="32x32">
+    <link rel="icon" type="image/png" href="{{ "/assets/favicons/favicon-16x16.png" | absolute_url }}" sizes="16x16">
+    <link rel="manifest" href="{{ "/manifest.json" | absolute_url }}">
+    <meta name="theme-color" content="#000000"> <!-- Hex as well - Android's task bar color -->
+    <link rel="apple-touch-startup-image" href="{{ "/assets/favicons/startup.png" | absolute_url }}"> <!-- iOS Splashscreen -->
+
+    <link rel="stylesheet" href="{{ "/assets/css/styles.css" | relative_url }}" />
+
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+</head>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include head.html %}
+
+  <body class="{{ page.title | downcase | default: "" }}">
+
+    <div class="wrapper">
+
+        {% include header.html %}
+
+        <main class="main grid" aria-label="Content">
+          <div class="col col--12 clearfix">
+            {{ content }}
+          </div>
+        </main>
+        
+    </div>
+
+    {% include footer.html %}
+
+    {% if site.bg_vid %}
+        <video poster="{{ "/assets/img/video.png" | relative_url }}" id="video" playsinline autoplay muted loop>
+            <source src="{{ "/assets/video/loop.mp4" | relative_url }}" type="video/mp4">
+            <source src="{{ "/assets/video/loop.webm" | relative_url }}" type="video/webm">
+        </video>
+    {% endif %}
+
+    {% include scripts.html %}
+
+  </body>
+
+</html>

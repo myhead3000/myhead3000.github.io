@@ -1,0 +1,45 @@
+%socialIcon {
+    width: 24px;
+    height: 24px;
+}
+
+.icon {
+    position: relative;
+    display: inline-block;
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    text-indent: -99em;
+    overflow: hidden;
+
+    &--facebook {
+        @include iconBg('facebook');
+        @extend %socialIcon;
+    }
+
+    &--twitter {
+        @include iconBg('twitter');
+        @extend %socialIcon;
+    }
+
+    &--instagram {
+        @include iconBg('instagram');
+        @extend %socialIcon;
+    }
+
+    &--soundcloud {
+        @include iconBg('soundcloud');
+        @extend %socialIcon;
+    }
+
+    &--bandcamp {
+        @include iconBg('bandcamp');
+        @extend %socialIcon;
+    }
+
+    &--spotify {
+        @include iconBg('spotify');
+        @extend %socialIcon;
+    }
+}

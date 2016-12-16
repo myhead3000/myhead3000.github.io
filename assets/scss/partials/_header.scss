@@ -1,0 +1,96 @@
+.header {
+    padding-top: 24px;
+    text-align: center;
+
+    @include media("<=tablet") {
+        text-align: right;
+    }
+
+    &__toggle {
+        position: relative;
+        display: none;
+        z-index: 4;
+
+        @include media("<=tablet") {
+            display: block;
+        }
+    }
+
+    &__nav {
+
+        @include media("<=tablet") {
+            position: fixed;
+            z-index: 3;
+            top: 0;
+            left: 100%;
+            height: 100%;
+            width: 240px !important;
+            background-color: #000;
+            transition: transform 200ms cubic-bezier(0.77, 0, 0.175, 1);
+
+            &.is-visible {
+                transform: translate3d(-240px, 0, 0);
+                box-shadow: 6px 6px 72px black;
+            }
+        }
+    }
+
+    &__list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        @include media("<=tablet") {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            left: 0;
+            transform: translateY(-50%);
+        }
+
+        li {
+            display: inline-block;
+            margin: 0 12px;
+
+            @include media("<=tablet") {
+                display: block;
+                padding: 12px 0;
+                border-bottom: 1px solid rgba(white, .3);
+                text-align: right;
+            }
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 14px;
+
+            @include media("<=tablet") {
+                font-size: 21px;
+            }
+        }
+    }
+}
+
+.hamburger {
+    &__top,
+    &__bottom {
+        transition: transform 200ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    }
+    &__middle {
+        opacity: 1;
+        transition: opacity 200ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    }
+    &.is-active {
+        .hamburger__top {
+            transform: rotate(45deg) translate3d(2px, -2px, 0);
+        }
+        .hamburger__bottom {
+            transform: rotate(-45deg) translate3d(-8px, -2px, 0);
+        }
+        .hamburger__middle {
+            opacity: 0;
+        }
+    }
+}

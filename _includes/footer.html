@@ -1,0 +1,51 @@
+<footer class="footer">
+    <div class="layout">
+        <ul class="footer__social">
+            {% if site.facebook_username %}
+                <li>
+                    <a href="//www.facebook.com/{{ site.facebook_username }}" target="_blank">
+                        <i class="icon icon--facebook">Facebook: {{ site.facebook_username }}</i>
+                    </a>
+                </li>
+            {% endif %}
+            {% if site.twitter_username %}
+                <li>
+                    <a href="//twitter.com/{{ site.twitter_username }}" target="_blank">
+                        <i class="icon icon--twitter">Twitter: {{ site.twitter_username }}</i>
+                    </a>
+                </li>
+            {% endif %}
+            {% if site.instagram_username %}
+                <li>
+                    <a href="//www.instagram.com/{{ site.instagram_username }}" target="_blank">
+                        <i class="icon icon--instagram">Instagram: {{ site.instagram_username }}</i>
+                    </a>
+                </li>
+            {% endif %}
+            {% if site.soundcloud_username %}
+                <li>
+                    <a href="//soundcloud.com/{{ site.soundcloud_username }}" target="_blank">
+                        <i class="icon icon--soundcloud">Soundcloud: {{ site.soundcloud_username }}</i>
+                    </a>
+                </li>
+            {% endif %}
+            {% if site.bandcamp_username %}
+                <li>
+                    <a href="//{{ site.bandcamp_username }}.bandcamp.com" target="_blank">
+                        <i class="icon icon--bandcamp">Bandcamp: {{ site.bandcamp_username }}</i>
+                    </a>
+                </li>
+            {% endif %}
+            {% if site.spotify_id %}
+                <li>
+                    <a href="//play.spotify.com/artist/{{ site.spotify_id }}" target="_blank">
+                        <i class="icon icon--spotify">Spotify: {{ site.spotify_id }}</i>
+                    </a>
+                </li>
+            {% endif %}
+        </ul>
+        <a href="http://www.smbls.net/" target="_blank" class="footer__label">
+            <img src="{{ "/assets/img/symbols@2x.png" | absolute_url }}" alt="SYMBOLS">
+        </a>
+    </div>
+</footer>
