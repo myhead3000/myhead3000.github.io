@@ -3,8 +3,10 @@ layout: default
 title: AXV
 order: 1
 ---
-<figure class="plastic">
-    <img src="{{ "/assets/img/covers/09.jpg" | relative_url }}" alt="AXV"/>
-</figure>
-<h1>Abyss Of An Excessive Void</h1>
-<a href="http://myhead.lnk.to/abyss" class="button">buy</a>
+<div itemscope itemtype="http://schema.org/MusicAlbum">
+    <figure class="plastic">
+        <img src="{{ "/assets/img/covers/09.jpg" | relative_url }}" alt="AXV" itemprop="image" />
+    </figure>
+    <h1 itemprop="name">Abyss Of An Excessive Void</h1>
+    <a href="http://myhead.lnk.to/abyss" class="button">buy</a>
+</div>
